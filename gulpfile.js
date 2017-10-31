@@ -5,10 +5,10 @@ var browserSync = require("browser-sync");
 var reload = browserSync.reload;
 
 //gulp create a server
-gulp.task("serve", ["loadScriptsAndCSS", "parseSass"],function(){
+gulp.task("serve", ["parseSass"],function(){
 
   gulp.start("parseSass");
-  gulp.start("loadScriptsAndCSS");
+  //gulp.start("loadScriptsAndCSS");
 
   browserSync({
     server:{  //create server
