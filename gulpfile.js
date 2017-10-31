@@ -25,15 +25,15 @@ gulp.task("serve", ["loadScriptsAndCSS", "parseSass"],function(){
 gulp.watch(['./app/*.scss', './app/components/*/*.scss', './app/components/*/*/*.scss'], ["parseSass"]);
 
 //inject .js and .css to index.html
-gulp.task("loadScriptsAndCSS", function(){
+// gulp.task("loadScriptsAndCSS", function(){
 
-  var target = gulp.src('./index.html');
-  var sources = gulp.src(['./app/*.js', './app/components/*.js', './app/components/*/*/*.js', './assets/css/*/*.css', './assets/css/*/*/*.css'], {read: false});
+//   var target = gulp.src('./index.html');
+//   var sources = gulp.src(['./app/*.js', './app/components/*.js', './app/components/*/*/*.js', './assets/css/*/*.css', './assets/css/*/*/*.css'], {read: false});
 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('./'));
+//   return target.pipe(inject(sources))
+//     .pipe(gulp.dest('./'));
 
-});
+// });
 
 //parse scss to css
 gulp.task("parseSass",function(){
