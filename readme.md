@@ -9,4 +9,4 @@
 ####Stack:
 Angular1.5, Gulp, API(https://api.github.com/users)
 
-![alt tag](https://raw.githubusercontent.com/AlbertWhite/github-checker/master/screenshot.png)
+![alt tag](https://github.com/AlbertWhite/github-checker/blob/master/screenshot.png)
