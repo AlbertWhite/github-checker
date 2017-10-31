@@ -28,7 +28,7 @@ gulp.watch(['./app/*.scss', './app/components/*/*.scss', './app/components/*/*/*
 gulp.task("loadScriptsAndCSS", function(){
 
   var target = gulp.src('./index.html');
-  var sources = gulp.src(['./app/*.js', './app/components/*/*.js', './app/components/*/*/*.js', './assets/css/*/*.css', './assets/css/*/*/*.css'], {read: false});
+  var sources = gulp.src(['./app/*.js', './app/components/*.js', './app/components/*/*/*.js', './assets/css/*/*.css', './assets/css/*/*/*.css'], {read: false});
 
   return target.pipe(inject(sources))
     .pipe(gulp.dest('./'));
