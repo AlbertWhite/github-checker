@@ -1,0 +1,36 @@
+<div class="headbar">
+  <input type="text" class="keyword-input" ng-model="app.keywords"/>
+  <div class="fake-input">Git Repos Checker</div>
+  <button type="button" class="submit-btn" ng-click="app.checkGitPros()">Check</button>
+</div>
+
+<div class="row content">
+  <div class="col-sm-8 col-md-8">
+    <div class="project-length" >{{app.reposelected.length}} results founded</div>
+    <div class="repo" ng-repeat="repo in app.reposelected">
+      <div class="title">
+        <a href={{repo.url}} target="_blank">{{repo.name}}</a>
+        <div class="subtitle">
+          <span>Watcher: {{repo.watcher}}</span>
+          <span>Fork: {{repo.fork}}</span>
+        </div>
+      </div>
+      <span class="description">  {{repo.description}}</span>
+      <div class="info">
+        <span ng-hide="!repo.language">Language: {{repo.language}}</span>
+        <span>Created at: {{repo.created_at}}</span>
+        <span>Updated at:{{repo.updated_at}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <span class="title">View the repos created after </span>
+    <input type="date" ng-change="app.changeTime()" ng-model="app.selectedTime">
+
+    <span class="title" ng-hide="app.reposelected.length == 0">View the repos with </span>
+    <div ng-repeat="language in app.languages">
+      <input type="checkbox" ng-change="app.changeLanguage()" ng-model="language.selected">
+      <label>{{language.language}}</label>
+    </div>
+  </div>
+</div>
