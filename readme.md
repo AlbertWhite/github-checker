@@ -1,12 +1,13 @@
-###Github repo checker.
+# Github repo checker.
 
-####How to start
+## How to start
 1. git clone https://github.com/AlbertWhite/github-checker.git
 2. npm install
 3. gulp serve
 
 
-####Stack:
+## Stack:
 Angular1.5, Gulp, API(https://api.github.com/users)
 
+## Screenshot
 ![alt tag](https://raw.githubusercontent.com/AlbertWhite/github-checker/master/screenshot.png)
